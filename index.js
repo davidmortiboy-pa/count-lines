@@ -12,7 +12,7 @@ function countLinesInFile(path) {
       .replace(/^\s*$[\r|\n|\r\n|\n\r]+/gm, ''); // replace empty lines - use m flag for multiline so ^ is start of line and $ is end
 
     const lines = contents.split(/[\r|\n|\r\n|\n\r]+/g);
-    if (lines[lines.length-1] === '') {
+    if (lines[lines.length-1] === '') { // remove final blank line
       lines.pop();
     }
 
